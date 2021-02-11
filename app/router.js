@@ -7,6 +7,7 @@ export default class Router extends EmberRouter {
 }
 
 Router.map(function () {
-  this.route('pokemon');
-  this.route('pokemon-details', { path: '/:pokemon_id' });
+  this.route('pokemon', function () {
+    this.route('pokemon-details', { path: '/:pokemon_id' });
+  });
 });
