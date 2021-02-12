@@ -1,2 +1,11 @@
-{{page-title "Pokemon"}}
-{{outlet}}
+<h1>Pokemon</h1>
+
+<p>Pokemons on PokeAPI</p>
+{{this.model.count}}
+
+<p>Results:</p>
+<ul>
+  {{#each this.model.results as |result|}}
+    <li>{{result.name}}</li>
+  {{/each}}
+</ul>
